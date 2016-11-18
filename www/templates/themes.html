@@ -1,0 +1,23 @@
+<ion-view view-title="{{theme[0].name}}">
+  <ion-content>
+    <div class="box">
+      <img ng-src="{{theme[0].background}}">
+      <p>{{theme[0].desc}}</p>
+    </div>
+    <div class="row editors">
+      <div class="col-10">
+        主编
+      </div>
+      <div ng-repeat="editor in theme[0].editors" class="col-10">
+        <a href="{{editor.url}}">
+          <img width="30" height="30" ng-src="{{editor.avatar}}">
+        </a>
+      </div>
+    </div>
+    <div class="list card">
+      <a ng-repeat="stories in themeStories" class="item" href="/#/app/list/{{stories.id}}">
+        <h2>{{stories.title}}</h2>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

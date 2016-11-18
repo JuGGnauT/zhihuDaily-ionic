@@ -1,0 +1,63 @@
+<ion-view view-title="首页">
+  <ion-content>
+    <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+    <ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true" does-continue="true"
+                   slide-interval=2000 show-pager="true" pager-click="pageClick(index)"
+                   active-slide="model.activeIndex" delegate-handle="delegateHandler">
+      <ion-slide>
+        <div class="box">
+          <a href="/#/app/list/{{sildeDatas[0].id}}">
+            <img ng-src="{{sildeDatas[0].image}}">
+          </a>
+          <p>{{sildeDatas[0].title}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box">
+          <a href="/#/app/list/{{sildeDatas[1].id}}">
+            <img ng-src="{{sildeDatas[1].image}}">
+          </a>
+          <p>{{sildeDatas[1].title}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box">
+          <a href="/#/app/list/{{sildeDatas[2].id}}">
+            <img ng-src="{{sildeDatas[2].image}}">
+          </a>
+          <p>{{sildeDatas[2].title}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box">
+          <a href="/#/app/list/{{sildeDatas[3].id}}">
+            <img ng-src="{{sildeDatas[3].image}}">
+          </a>
+          <p>{{sildeDatas[3].title}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box">
+          <a href="/#/app/list/{{sildeDatas[4].id}}">
+            <img ng-src="{{sildeDatas[4].image}}">
+          </a>
+          <p>{{sildeDatas[4].title}}</p>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+    <div class="list">
+      <div ng-repeat="allData in allDatas">
+        <div class="item item-divider">
+          {{allData.date}}
+        </div>
+        <a ng-repeat="allData in allData.stories" class="item item-thumbnail-right" href="/#/app/list/{{allData.id}}">
+          <img ng-src="{{allData.images}}">
+          <h2>{{allData.title}}</h2>
+        </a>
+      </div>
+    </div>
+    <button ng-click="loadMore()" class="button button-block button-positive">
+      查看更多
+    </button>
+  </ion-content>
+</ion-view>

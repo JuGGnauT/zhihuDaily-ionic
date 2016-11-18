@@ -1,0 +1,77 @@
+/* Empty. Add your own CSS if you like */
+.scroll{
+  max-width:600px;
+  min-width:300px;
+  margin:0 auto;
+}
+.slider-slide {
+  color: #000;
+  background-color: #fff; text-align: center;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300;
+}
+
+.box{
+  max-height:250px;
+  overflow: hidden;
+  position:relative;
+}
+.box img{
+  width:100%;
+  transform: translateY(-10%);
+}
+.box p{
+  position:absolute;
+    width:70%;
+  right:4%;
+  bottom:30px;
+  color:#fff;
+  font-size:28px;
+  line-height:1.2em;
+}
+.main-wrap{
+  max-width:600px;
+  min-width:300px;
+  margin:0 auto;
+}
+
+.img-wrap{
+  min-height:200px;
+  max-height:375px;
+  overflow: hidden;
+  position:relative;
+}
+.img-wrap>h1{
+  position:absolute;
+  left:0;
+  padding:10px;
+  bottom:20px;
+  font-size:28px;
+  color:#fff;
+}
+.card{
+  margin-top:5px;
+}
+.editors{
+  margin-top:5px;
+  margin-left:10px;
+}
+.editors div{
+  position:relative;
+  line-height:35px;
+}
+.editors img{
+  position: absolute;
+  border-radius: 50%;
+  top:50%;
+  transform:translateY(-50%);
+}
+.text-center button,.left-buttons button,.back-button{
+  width:auto;
+}
+@media screen and (max-width: 480px) {
+
+  .box>p{
+   font-size:20px;
+  }
+
+}
