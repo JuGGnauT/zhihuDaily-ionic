@@ -22,9 +22,8 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
     });
   })
 
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
     $stateProvider
-
       .state('app', {
         url: '/app',
         abstract: true,
@@ -32,11 +31,21 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         controller: 'AppCtrl'
       })
       .state('app.detail', {
-        url: '/list/:id',
+        url: '/detail/:id',
         views: {
           'menuContent': {
             templateUrl: 'templates/detail.html',
             controller: 'detailCtrl'
+          }
+        }
+      })
+      .state('app.about', {
+        cache: false,
+        url: '/about',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/about.html',
+            controller: 'aboutCtrl'
           }
         }
       })
@@ -60,4 +69,5 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       })
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/list');
+    $ionicConfigProvider.views.transition('none');
   });

@@ -1,5 +1,18 @@
-<ion-view view-title="详情" hide-nav-bar="true">
-  <ion-content ng-bind-html="Body">
+<ion-view view-title="{{title}}" hide-nav-bar=true>
+  <ion-content delegate-handle="detailContent" on-hold="barShow()"  nav-transition="none">
+    <div ng-bind-html="Body">
 
+    </div>
   </ion-content>
+  <ion-footer-bar align-title="left" class="bar-positive">
+    <div class="buttons">
+      <a on-tap="prev()" class="button button-icon ion-arrow-left-c button-clear"></a>
+    </div>
+    <div class="buttons">
+      <a on-tap="backTop()" class="button button-icon icon ion-arrow-up-c button-clear"></a>
+    </div>
+    <div class="buttons">
+      <a on-tap="nextScreen()" class="button button-icon icon ion-arrow-down-c button-clear"></a>
+    </div>
+  </ion-footer-bar>
 </ion-view>

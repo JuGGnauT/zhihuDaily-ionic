@@ -11,7 +11,7 @@
 }
 
 .box{
-  max-height:250px;
+  height:200px;
   overflow: hidden;
   position:relative;
 }
@@ -21,7 +21,7 @@
 }
 .box p{
   position:absolute;
-    width:70%;
+  width:90%;
   right:4%;
   bottom:30px;
   color:#fff;
@@ -34,6 +34,10 @@
   margin:0 auto;
 }
 
+.headline img{
+  width:100%;
+  height:100%;
+}
 .img-wrap{
   min-height:200px;
   max-height:375px;
@@ -49,7 +53,8 @@
   color:#fff;
 }
 .card{
-  margin-top:5px;
+  margin-top:10px;
+  margin-bottom:10px;
 }
 .editors{
   margin-top:5px;
@@ -65,12 +70,19 @@
   top:50%;
   transform:translateY(-50%);
 }
-.text-center button,.left-buttons button,.back-button{
+.text-center a,.left-buttons button,.back-button{
   width:auto;
 }
+.about-content{
+  position:relative;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+
 @media screen and (max-width: 480px) {
 
-  .box>p{
+  .box p{
    font-size:20px;
   }
 
