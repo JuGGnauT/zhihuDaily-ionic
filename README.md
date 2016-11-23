@@ -6,5 +6,7 @@
 ![image](https://github.com/594053703/zhihuDaily-ionic/raw/master/readmeImg/angular004.png)
 
 npm install -g ionic cordova
+
 cd 位置/zhihuDaily-ionic
+
 ionic serve
